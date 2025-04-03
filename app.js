@@ -18,7 +18,7 @@ const cors = require('cors')
 
 app.use(
   cors({
-    origin: "https://zesty-monstera-272e02.netlify.app/", // Frontend URL (Vite default port)
+    origin: "https://joyful-gelato-35e848.netlify.app/", // Frontend URL (Vite default port)
     credentials: true, // Allow cookies to be sent
   })
 );
