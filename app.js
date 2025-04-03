@@ -18,7 +18,7 @@ const cors = require('cors')
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Frontend URL (Vite default port)
+    origin: "https://zesty-monstera-272e02.netlify.app/", // Frontend URL (Vite default port)
     credentials: true, // Allow cookies to be sent
   })
 );
@@ -29,7 +29,7 @@ const fileuploader = require('express-fileupload')
 // call function of fileuploader
 app.use(fileuploader({ useTempFiles: true }))
 
-// for dataget in ap (change formate)
+// for dataget in api (change formate)
 app.use(express.json())
 
 const cookieParse = require('cookie-parser')
