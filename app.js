@@ -18,7 +18,9 @@ const cors = require('cors')
 
 app.use(
   cors({
-    origin: ["http://advancedcomputerclasses.com"], // Frontend URL (Vite default port)
+    origin: "*"
+    // ["http://advancedcomputerclasses.com"]
+    , // Frontend URL (Vite default port)
     credentials: true, // Allow cookies to be sent
   })
 );
