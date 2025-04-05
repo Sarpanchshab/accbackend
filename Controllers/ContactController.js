@@ -22,7 +22,7 @@ class ContactController {
   static GetAllMessage = async (req, res) => {
     try {
       // Get all messages
-      const allMessage = await ContactModel.find();
+      const allMessage = await ContactModel.find().sort({createdAt: -1});
       // Count the number of messages
       const messageCount = await ContactModel.countDocuments();
       res.status(201).json({

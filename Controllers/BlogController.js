@@ -24,7 +24,7 @@ class BlogController {
   static GetAllBlog = async (req, res) => {
     try {
       // Get all Blog
-      const allBlog = await BlogModel.find();
+      const allBlog = await BlogModel.find().sort({ createdAt: -1 });
       // console.log(allBlog)
       const blogCount = await BlogModel.countDocuments();
       res.status(201).json({

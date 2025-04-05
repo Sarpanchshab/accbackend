@@ -34,7 +34,7 @@ class CourseController {
   static GetAllCourse = async (req, res) => {
     try {
       // Get all course
-      const allCourse = await CourseModel.find();
+      const allCourse = await CourseModel.find().sort({ createdAt: -1 });
       // Count the number of course
       const courseCount = await CourseModel.countDocuments();
       res.status(201).json({
@@ -82,7 +82,7 @@ class CourseController {
   static GetNumberCourse = async (req, res) => {
     try {
       // Get the 3 most recent courses
-      const recentCourses = await CourseModel.find();
+      const recentCourses = await CourseModel.find().sort({ createdAt: -1 });
 
       res.status(200).json({
         status: true,
