@@ -17,14 +17,14 @@ router.post("/logout",UserController.logout)
 router.post("/changepassword", UserController.changePassword)
 
 //Message English ROUTES
-router.post("/insertText",verifyToken, TextController.InsertText);
+router.post("/insertText", TextController.InsertText);
 router.get("/getAllText", TextController.GetAllText);
-router.delete("/DeleteText/:id",verifyToken, TextController.DeleteText);
+router.delete("/DeleteText/:id", TextController.DeleteText);
 
 //Message Hindi ROUTES
-router.post("/insertHindiText",verifyToken, TextHindiController.InsertHindiText);
+router.post("/insertHindiText", TextHindiController.InsertHindiText);
 router.get("/getAllHindiText", TextHindiController.GetAllHindiText);
-router.delete("/DeleteHindiText/:id",verifyToken, TextHindiController.DeleteHindiText);
+router.delete("/DeleteHindiText/:id", TextHindiController.DeleteHindiText);
 
 // Course ROUTES
 router.post("/insertCourse", CourseController.InsertCourse);
